@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
         integrity="sha512-ISS7cAi1PEhQ8jnbJpJZMd29NlhNj4AWYyLOSp2CE/CsHxTCu+r+t0D2yoJudVrd0/8fTVPUVDzY5Tvli75u/g=="
         crossorigin="anonymous" />
@@ -23,13 +24,13 @@
             
                 <ul class="menu list">
                     <li class="menu-item">
-                        <a class="menu-link  link" href="index.html">Студия</a>
+                        <a class="current-link  link" href="index.html">Студия</a>
                     </li>
                     <li class="menu-item">
-                        <a class="menu-link link " href="./portfolio.html">Портфолио</a>
+                        <a href="./portfolio.html">Портфолио</a>
                     </li>
                     <li class="menu-item">
-                        <a class="menu-link  link" href="">Контакты</a>
+                        <a href="">Контакты</a>
                     </li>
                 </ul>
             </nav>
@@ -60,7 +61,7 @@
         <section class="hero-center">
             <div class="container">
                 <h1 class="hero-center-title">Эффективные решения</br> для вашего бизнеса</h1>
-                <button class="hero-center-modal-bth" type="button">Заказать услугу</button>
+                <button class="hero-center-modal-bth" type="button" data-modal-open>Заказать услугу</button>
             </div>
               
         </section>
@@ -119,16 +120,24 @@
                 <h2 class="title team-title-web">Чем мы занимаемся</h2>
                 <ul class="work-img-list list">
                     <li class="work-img-item">
-                        <img class="work-img-item-img" src="./images/about/gallery-img-1.jpg" alt="набираем код" width="370"
-                            height="294">
+                        <div class="work-img-wrapper">
+                            <img class="work-img-item-img" src="./images/about/gallery-img-1.jpg" alt="набираем код" width="370" height="294">
+                            <p class="work-overlay">Десктопные приложения</p>
+                        </div>
                     </li>
                     <li class="work-img-item">
-                        <img class="work-img-item-img" src="./images/about/gallery-img-2.jpg" alt="проверяем роботу телефона"
-                            width="370" height="294">
+                        <div class="work-img-wrapper">
+                        <img class="work-img-item-img" src="./images/about/gallery-img-2.jpg" alt="проверяем роботу телефона" width="370" height="294">
+                            <p class="work-overlay">Мобильные приложения</p>
+                        </div>
+                        
                     </li>
                     <li class="work-img-item">
-                        <img class="work-img-item-img" src="./images/about/gallery-img-3.jpg" alt="смотрим на екран телефона"
-                            width="370" height="294">
+                        <div class="work-img-wrapper">
+                            <img class="work-img-item-img" src="./images/about/gallery-img-3.jpg" alt="смотрим на екран телефона" width="370"  height="294">
+                            <p class="work-overlay">Дизайнерские решения</p>
+                        </div>
+                        
                     </li>
                 </ul>
             </div>
@@ -407,5 +416,19 @@
         </div>     
     </footer>
 <!-- ================ end footer================== -->
+
+
+<div class="backdrop is-hidden" data-modal>
+    <div class="modal">
+        <button type="button" class="modal-close-bth" data-modal-close>
+            <svg class="modal-close-bth-icon">
+                <use href="./images/sprite.svg#icon-close-bth"></use>
+            </svg>
+        </button>
+    </div>
+</div>
+
+
+<script src="./js/modal.js"></script>
 </body>
 </html>
